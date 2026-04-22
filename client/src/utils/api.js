@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: '/api' });
+const API = axios.create({ baseURL: 'https://inventory-api-t1lm.onrender.com/api' });
 
 // Attach token to every request automatically
 API.interceptors.request.use((config) => {
