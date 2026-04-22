@@ -19,7 +19,11 @@ app.use(express.urlencoded({ extended: false }));
 // CORS — allow React dev server
 app.use(
   cors({
-    origin: process.env.NODE_ENV === 'production' ? false : 'http://localhost:3000',
+    origin: [
+      'https://inventory-management-gamma-lilac.vercel.app', 
+      'http://localhost:3000' // Keep this so you can still test locally
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
