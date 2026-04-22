@@ -12,10 +12,6 @@ connectDB();
 
 const app = express();
 
-// Body parser
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
 // CORS — allow React dev server
 app.use(
   cors({
@@ -27,6 +23,12 @@ app.use(
     credentials: true,
   })
 );
+
+// Body parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+
 
 // ── Routes ──────────────────────────────────────────────
 app.use('/api/auth', require('./routes/authRoutes'));
