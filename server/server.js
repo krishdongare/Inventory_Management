@@ -21,9 +21,9 @@ app.use(
   cors({
     origin: [
       'https://inventory-management-gamma-lilac.vercel.app', 
-      'http://localhost:3000' // Keep this so you can still test locally
+      'http://localhost:3000'
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
 );
