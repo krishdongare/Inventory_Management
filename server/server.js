@@ -23,6 +23,8 @@ app.use(
     credentials: true,
   })
 );
+app.options('*', cors());
+
 
 // Body parser
 app.use(express.json());
