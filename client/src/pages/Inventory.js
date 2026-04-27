@@ -202,7 +202,8 @@ const Inventory = () => {
                 </div>
               ))}
 
-          // changes 
+        <!-- changes --> 
+    
               {[['quantity','Quantity','number'],['minimumThreshold','Min Threshold','number'],['unitPrice','Unit Price (₹)','number']].map(([field, label, type]) => (
                 <div key={field} style={styles.field}>
                   <label style={styles.label}>{label}</label>
@@ -211,7 +212,7 @@ const Inventory = () => {
               ))}
 
 
-            // changes   
+           <!-- changes --> 
                   
               
               <div style={styles.modalActions}>
