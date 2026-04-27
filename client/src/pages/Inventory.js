@@ -209,6 +209,7 @@ const Inventory = () => {
                   </div>
                 ))}
               </div>
+              <br>
               <div style={styles.modalActions}>
                 <button type="button" onClick={() => setShowModal(false)} style={styles.cancelBtn}>Cancel</button>
                 <button type="submit" style={styles.saveBtn}>{editId ? 'Update' : 'Add'}</button>
