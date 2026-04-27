@@ -201,14 +201,18 @@ const Inventory = () => {
                   <input name={field} value={form[field]} onChange={handleFormChange} style={styles.input} required={field !== 'description'} />
                 </div>
               ))}
-              <div style={styles.row}>
-                {[['quantity','Quantity','number'],['minimumThreshold','Min Threshold','number'],['unitPrice','Unit Price (₹)','number']].map(([field, label, type]) => (
-                  <div key={field} style={{ flex: 1 }}>
-                    <label style={styles.label}>{label}</label>
-                    <input name={field} type={type} value={form[field]} onChange={handleFormChange} style={styles.input} required min={0} />
-                  </div>
-                ))}
-              </div>
+
+          // changes 
+              {[['quantity','Quantity','number'],['minimumThreshold','Min Threshold','number'],['unitPrice','Unit Price (₹)','number']].map(([field, label, type]) => (
+                <div key={field} style={styles.field}>
+                  <label style={styles.label}>{label}</label>
+                  <input name={field} type={type} value={form[field]} onChange={handleFormChange} style={styles.input} required min={0} />
+                </div>
+              ))}
+
+
+            // changes   
+                  
               <br>
               <div style={styles.modalActions}>
                 <button type="button" onClick={() => setShowModal(false)} style={styles.cancelBtn}>Cancel</button>
